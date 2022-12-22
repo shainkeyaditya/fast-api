@@ -9,6 +9,7 @@ uvicorn = "*"
 sqlalchemy = "*"
 mysql-connector-python = "*"
 gunicorn = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
 
 [dev-packages]
 

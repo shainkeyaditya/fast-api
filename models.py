@@ -10,7 +10,8 @@ class Users(Base):
     email = Column(String(100), unique=True)
     password = Column(String(100))
     created_at = Column(String(100))
-    updated_at = Column(String(100))
+    # updated_at = Column(Date(100))
+    # items = relationship("Item", back_populates="owner")
 
     def __repr__(self):
         return f"<name and email ={self.name}{self.email}>"
@@ -29,7 +30,7 @@ class Item(Base):
     description = Column(Text)
     price = Column(Integer, nullable=False)
     on_offer = Column(Boolean, default=False)
-    # owner = relationship("Users", back_populates="items")
+    # owner = relationship("User", back_populates="items")
 
     def __repr__(self):
         return f"<Item name={self.name} price={self.price}>"
